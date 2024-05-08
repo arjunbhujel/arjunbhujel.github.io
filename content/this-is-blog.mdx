@@ -1,0 +1,37 @@
+---
+title: "2023 Blog Refresh"
+publishedAt: "2023-11-19"
+summary: "Including some of my latest hot takes (okay they are pretty mild)."
+---
+
+I updated my blog this weekend and wanted to share some thoughts along the way:
+
+- [Content Management](#content-management)
+- [Performance](#performance)
+- [Opinions](#opinions)
+
+## Content Management
+
+I've moved my content from HTML to vanilla Markdown, to MDX, to a CMS, and back to MDX over the years. My content requirements as of now are:
+`
+
+1. Written in Markdown¹
+2. Support for syntax highlighting, embedded tweets, and other components
+3. Managed through version control²
+4. Minimal external dependencies
+
+My goal was to simplify without giving up too many features.
+
+### Retrieving Content
+
+You can go surprisingly far with just Node.js and JavaScript. You'll notice a theme start to emerge in this blog post: fewer dependencies, and more copy/paste-able code.
+
+I removed the following libraries:
+
+- `contentlayer`
+- `next-contentlayer`
+- `rehype-autolink-headings`
+- `rehype-pretty-code`
+- `rehype-slug`
+- `remark-gfm`
+- `shiki`
