@@ -1,0 +1,26 @@
+/* Image */
+
+.round_img {
+  border-radius: 0.5rem;
+}
+
+/* Callout  */
+
+.callout {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--text-b);
+  /* border-width: 1px;
+  border-color: var(--text-b); */
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-small);
+}
+
+.callout_img {
+  width: 1rem;
+}
+
+.callout_content {
+  width: 100%;
+}
