@@ -5,7 +5,7 @@ import { getBlogPosts } from "@/app/db/blog"
 import { CustomMDX } from "@/components/mdx"
 import { formatDate } from "@/lib/utils"
 
-export async function generateMetadata({ params }) {
+const generateMetadata = ({ params }) => {
   let blog = getBlogPosts().find((blog) => blog.slug === params.slug)
   if (!blog) {
     return
@@ -15,7 +15,9 @@ export async function generateMetadata({ params }) {
     publishedAt: publishedTime,
     summary: description,
   } = blog.metadata
+
   let ogImage = `https://arjunbhujel.com.np/logo.svg`
+
   return {
     title,
     description,
@@ -39,6 +41,11 @@ export async function generateMetadata({ params }) {
     },
   }
 }
+
+export async function generateStaticParams() {
+  return generateMetadata
+}
+
 export default function BlogDetailPage({ params }) {
   const blog = getBlogPosts().find((blog) => blog.slug === params.slug)
   if (!blog) {
