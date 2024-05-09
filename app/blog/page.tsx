@@ -6,6 +6,7 @@ import Container from "@/components/ui/container";
 import Separator from "@/components/ui/separator";
 import { BlogCard } from "@/components/ui/blogCard";
 
+
 export const metadata: Metadata = {
   title: "Blog",
   description: "Read my thoughts on frontend development, design, and more.",

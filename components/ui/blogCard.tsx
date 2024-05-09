@@ -1,16 +1,18 @@
 import Link from "next/link"
 
+import "@/styles/ui/blogCard.css"
+
 export const BlogCard = ({ blog }) => {
   return (
     <>
       <article className="blogCard">
         <header>
-          <h3 className="blogCard-head">
+          <h3 className="blogCard_head">
             <Link href={`/blog/${blog.slug}`}>{blog.metadata.title}</Link>
           </h3>
-          <p className="blogCard-summary">{blog.metadata.summary}</p>
+          <p className="blogCard_summary">{blog.metadata.summary}</p>
         </header>
-        <footer className="blogCard-foot">
+        <footer className="blogCard_foot">
           <time>
             {new Date(blog.metadata.publishedAt).toLocaleDateString("en-US", {
               year: "numeric",
@@ -19,7 +21,7 @@ export const BlogCard = ({ blog }) => {
             })}
           </time>
           <span>·</span>
-          <span className="blogCard-readingTime">
+          <span className="blogCard_readingTime">
             {blog.readingTime} MIN READ
           </span>
         </footer>

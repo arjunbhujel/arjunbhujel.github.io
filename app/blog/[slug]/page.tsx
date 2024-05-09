@@ -6,6 +6,8 @@ import { getBlogPosts } from "@/app/db/blog";
 import { CustomMDX } from "@/components/mdx";
 import { formatDate } from "@/lib/utils";
 
+import "@/styles/blogSinglePage.css"
+
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
@@ -19,7 +21,7 @@ export async function generateMetadata({
     publishedAt: publishedTime,
     summary: description,
   } = blog.metadata;
-  let ogImage = `https://onurhan.dev/logo.svg`;
+  let ogImage = `https://arjunbhujel.com.np/logo.svg`;
 
   return {
     title,
@@ -29,7 +31,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `https://onurhan.dev/blog/${blog.slug}`,
+      url: `https://arjunbhujel.com.np/blog/${blog.slug}`,
       images: [
         {
           url: ogImage,
@@ -53,7 +55,7 @@ export default function BlogDetailPage({ params }) {
   }
 
   return (
-    <section className="mx-auto px-2 sm:px-6 lg:px-8 w-full sm:max-w-screen-lg">
+    <section className="content">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -66,31 +68,32 @@ export default function BlogDetailPage({ params }) {
             dateModified: blog.metadata.publishedAt,
             description: blog.metadata.summary,
             image: blog.metadata.image
-              ? `https://onurhan.dev${blog.metadata.image}`
-              : `https://onurhan.dev/og?title=${blog.metadata.title}`,
-            url: `https://onurhan.dev/blog/${blog.slug}`,
+              ? `https://arjunbhujel.com.np${blog.metadata.image}`
+              : `https://arjunbhujel.com.np/og?title=${blog.metadata.title}`,
+            url: `https://arjunbhujel.com.np/blog/${blog.slug}`,
             author: {
               "@type": "Person",
-              name: "Onurhan Demir",
+              name: "Arjun Bhujel",
             },
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
+
+      <h1 className="content_heading">
         {blog.metadata.title}
       </h1>
-      <div className="flex justify-start items-center mt-2 mb-8 text-sm max-w-[650px]">
+      <div className="content_brief">
         <Suspense fallback={<p className="h-5" />}>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="content_time">
             {formatDate(blog.metadata.publishedAt)}
           </p>
-          <span className="mx-2 text-neutral-400">—</span>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <span className="content_line">—</span>
+          <p className="content_read">
             {blog.readingTime} min read
           </p>
         </Suspense>
       </div>
-      <article className="prose prose-quoteless prose-neutral dark:prose-invert text-justify w-auto">
+      <article className="content_body">
         <CustomMDX source={blog.content} />
       </article>
     </section>

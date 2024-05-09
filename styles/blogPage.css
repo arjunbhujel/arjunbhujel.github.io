@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .article {
   margin-top: 1rem;
   display: flex;

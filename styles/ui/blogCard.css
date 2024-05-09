@@ -1,0 +1,22 @@
+.blogCard {
+  margin: 2rem 0;
+}
+
+.blogCard_summary {
+  margin-top: 0.25rem;
+}
+
+.blogCard_head {
+  font-size: var(--font-normal);
+  text-decoration: solid underline var(--text-b) 1px;
+}
+
+.blogCard_foot {
+  margin-top: 0.25rem;
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
+  font-size: var(--font-small);
+  font-weight: var(--weight-normal);
+  color: var(--text-b);
+}

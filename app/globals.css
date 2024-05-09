@@ -1,17 +1,19 @@
 :root {
   /* font size */
   --font-large: 1.5rem;
+  --font-medium: 1.25rem;
   --font-normal: 1rem;
   --font-small: 0.875rem;
 
   /* font weight */
   --weight-bold: 400;
   --weight-normal: 300;
+  --weight-light: 200;
 
   /* color  */
   --text-a: #000000;
   --text-b: #333333;
-  --bg: #ffffff;
+  --bg: #fdfdfc;
   --blue: #5465ff;
 }
 
@@ -19,7 +21,7 @@
   :root {
     --text-a: #ffffff;
     --text-b: #f2f2f2;
-    --bg: #000;
+    --bg: #161615;
     --blue: #5465ff;
   }
 }
@@ -60,7 +62,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-size: var(--font-normal);
+  font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   color: var(--text-a);
 }
