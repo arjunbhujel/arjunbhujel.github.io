@@ -4,6 +4,15 @@
   font-weight: var(--weight-normal);
 }
 
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--text-400);
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -16,4 +25,9 @@ nav {
 
 .intro_description {
   margin-bottom: 1rem;
+}
+
+.active-page {
+  color: var(--text-50);
+  font-weight: var(--weight-bold);
 }

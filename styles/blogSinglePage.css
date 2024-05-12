@@ -5,7 +5,7 @@
 .content_brief {
   display: flex;
   margin: 0.5rem 0 2rem 0;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
   color: var(--text-b);
