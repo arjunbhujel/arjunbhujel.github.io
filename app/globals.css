@@ -22,6 +22,24 @@
   --blue: #5278df;
 }
 
+[data-theme="light"] {
+  --bg: #ffffff;
+  --text-50: #292929;
+  --text-100: #3d3d3d;
+  --text-200: #464646;
+  --text-300: #525252;
+  --text-400: #656565;
+}
+
+[data-theme="dark"] {
+  --bg: #292929;
+  --text-50: #ffffff;
+  --text-100: #efefef;
+  --text-200: #dcdcdc;
+  --text-300: #ededed;
+  --text-400: #989898;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #292929;
@@ -84,18 +102,6 @@ h4 {
 
 p {
   font-size: var(--font-normal);
-  font-weight: var(--weight-normal);
-}
-p.bold {
-  font-size: var(--font-normal);
-  font-weight: var(--weight-bold);
-}
-p.light {
-  font-size: var(--font-normal);
-  font-weight: var(--weight-light);
-}
-p.small {
-  font-size: var(--font-small);
   font-weight: var(--weight-normal);
 }
 

@@ -1,0 +1,41 @@
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 0.5rem;
+  margin-top: 2rem;
+}
+
+.nav {
+  align-self: flex-end;
+}
+
+.logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+p.name {
+  font-weight: var(--weight-bold);
+  color: var(--text-50);
+}
+
+p.detail {
+  font-weight: var(--weight-normal);
+  color: var(--text-200);
+}
+
+/* SVG logo changes */
+
+.inner {
+  stroke: var(--bg);
+}
+
+.colorleft {
+  stop-color: var(--text-50);
+}
+
+.colorright {
+  stop-color: var(--text-100);
+}
