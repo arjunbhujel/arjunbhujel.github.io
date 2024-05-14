@@ -1,6 +1,5 @@
-import Image from "next/image"
-
 import "@/styles/aboutPage.css"
+import Social from "@/components/ui/social"
 
 export default function About() {
   return (
@@ -21,6 +20,8 @@ export default function About() {
         and a dash of wit to your project, then you&apos;ve come to the right
         place! Let&apos;s connect and see how we can make magic happen together.
       </p>
+
+      <Social />
     </div>
   )
 }

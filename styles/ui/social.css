@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  color: var(--text-400);
+  overflow-x: hidden;
+}
+
+.socialLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1rem;
+  border: 1px solid var(--text-200);
+  border-radius: 0.5rem;
+  width: fit-content;
+}
+
+.social_detail {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+  .social {
+    flex-direction: column;
+  }
+}

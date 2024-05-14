@@ -4,19 +4,21 @@
 
 .blogCard_summary {
   margin-top: 0.25rem;
+  text-align: justify;
 }
 
 .blogCard_head {
   font-size: var(--font-normal);
-  text-decoration: solid underline var(--text-b) 1px;
+  text-decoration: solid underline var(--blue) 2px;
 }
 
 .blogCard_foot {
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 0.5rem;
   font-size: var(--font-small);
   font-weight: var(--weight-normal);
-  color: var(--text-b);
+  color: var(--text-200);
+  text-transform: uppercase;
 }
